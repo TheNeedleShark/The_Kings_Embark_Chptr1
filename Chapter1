@@ -1,0 +1,99 @@
+# scene 1
+
+
+def scene1():
+    import time
+    print("""WELCOME TO THE KING'S EMBARK
+        
+ 
+        You wake up in Your bedroom in the middle of the night. You heard a loud BANG! outside the house.
+         You have two choices You can either stay in the room or check what the sound might be about.
+ 
+        Type your choice: Stay or Evaluate?""")
+ 
+    c1 = input()
+    time.sleep(2)
+    ans = 'incorrect'
+    while(ans=='incorrect'):
+        if(c1.upper() == "STAY"):
+            print("\nYou decide to stay in the room and Ignore the sound, thinking it was probable somthing in your head.")
+            ans = 'correct'
+        elif(c1.upper()=="EVALUATE"):
+            print("You sneak quietly outside the house only to be greeted by the King's royal guards")
+            ans='correct'
+            scene2()
+        else:
+            print("ENTER THE CORRECT CHOICE! Stay or Evaluate?")
+            c1 = input()
+            
+            
+#scene 2
+
+
+
+def scene2():
+    import time
+    print("""
+            The guard explain how the king had randomely picked a civilian to 
+            get his almighty sceptre that had bee stolen by the hands of unknown wrath. They
+            ask you if you are up to the task
+            
+            Type your choice: Embark or Sleep
+            
+            """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while(ans=='incorrect'):
+        if(c1.lower()=="embark"):
+            print("""\n The guards agree to take you to the king for further instructions""")
+            time.sleep(2)
+            print("""\n The king greets you pleasently as a servent gives you a nice glass of wine, 'so, you have agreed to help me find my Sceptre?'The king said, 'Yes, your majesty' you replied 'well, the goblins of the north have stolen my magical Sceptre! you must head north and bring my sceptre back! Here are your weapons' a servent hands you a sword and sheild, as well as some chain mail armour 'good luck sir Edward' the king says 'now head north and reclaim what hase been lost!' """)
+            ans = 'correct'
+            pick="True"
+        elif(c1.upper()=='SLEEP'):
+            print("""\nYou ignored the guards and went back to sleep, only for them to force you to the palace """)
+            print("""\n The king greets you pleasently as a servent gives you a nice glass of wine, 'so, you have agreed to help me find my Sceptre?'The king said, 'Not like I had a choice' you scoffed 'rude' he muttered 'well, the goblins of the north have stolen my magical Sceptre! you must head north and bring my sceptre back! Here are your weapons' a servent hands you a sword and sheild, as well as some chain mail armour 'good luck sir Edward' the king says 'now head north and reclaim what hase been lost!' """)
+            ans='correct'
+            pick="False"
+        else:
+            print("Wrong Input! Enter Embark or Sleep?")
+            c1=input()
+    time.sleep(2)
+    scene3(pick)
+
+#scene3
+
+def scene3(pick_value):
+    import time
+    print("""\n\nAfter walking for a while, You find the goblin fortress, You walk in with flooding confidence, only for it to evaporate as the army of 8,000 goblins rush you over """)
+    time.sleep(2)
+    if(pick_value=="True"):
+        time.sleep(2)
+        print(""" You then find newfound strenght in you armour, like it was enchanted. Your sword starts slashing like crazy, you having no idea of where this is coming from, you just accept it and slash harder. You hear One of the goblin generals saying 'he's playing fruit ninja out here while we are doing nothing, DO SOMETHING!!' you slay the last goblin with one strike""")
+        time.sleep(2)
+        print("\n The last goblin didn't fall down like the rest, instead  he howeled in pain, but didn't seem to be affected at all. Then he transformed into a purple dragon-pteradactyl like creature with long claws, a hunched back and a neck with a sharp turn, his eyes were yellow and you could cont his ribs, he roared in anger and shot a fireball out of his mouth, and knocked you down with a quick jab of the tail. He then grabbed you by the head and slided you across the battlefeild and thrusted you into a portal.")
+    elif(pick_value=="False"):
+        print("before you could swing at the last goblin, he transformed into a purple dragon-pteradactyl like creature with long claws, a hunched back and a neck with a sharp turn, his eyes were yellow and you could cont his ribs, he roared in anger and shot a fireball out of his mouth, and knocked you down with a quick jab of his long, snake-like tail, and launched you into a portal ")
+        
+scene1()
+print("\n\n")
+print("=================================END OF CHAPTER 1=================================")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
